@@ -4,13 +4,10 @@
 //
 //  Created by Rebecca Stone on 6/6/25.
 //
-
 import SwiftUI
-
 
 struct FavoriteButton: View {
     @Binding var isSet: Bool
-
 
     var body: some View {
         Button {
@@ -22,7 +19,6 @@ struct FavoriteButton: View {
         }
     }
 }
-
 
 #Preview {
     FavoriteButton(isSet: .constant(true))

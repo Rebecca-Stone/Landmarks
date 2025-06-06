@@ -4,12 +4,14 @@
 //
 //  Created by Rebecca Stone on 6/6/25.
 //
-
 import SwiftUI
 
 struct BadgeSymbol: View {
-    static let symbolColor = Color(red: 79.0 / 255, green: 79.0 / 255, blue: 191.0 / 255)
-
+    static let symbolColor = Color(
+        red: 79.0 / 255,
+        green: 79.0 / 255,
+        blue: 191.0 / 255
+    )
 
     var body: some View {
         GeometryReader { geometry in
@@ -21,29 +23,29 @@ struct BadgeSymbol: View {
                 let topWidth = width * 0.226
                 let topHeight = height * 0.488
 
-
                 path.addLines([
                     CGPoint(x: middle, y: spacing),
                     CGPoint(x: middle - topWidth, y: topHeight - spacing),
                     CGPoint(x: middle, y: topHeight / 2 + spacing),
                     CGPoint(x: middle + topWidth, y: topHeight - spacing),
-                    CGPoint(x: middle, y: spacing)
+                    CGPoint(x: middle, y: spacing),
                 ])
-                
-                path.move(to: CGPoint(x: middle, y: topHeight / 2 + spacing * 3))
+
+                path.move(
+                    to: CGPoint(x: middle, y: topHeight / 2 + spacing * 3)
+                )
                 path.addLines([
                     CGPoint(x: middle - topWidth, y: topHeight + spacing),
                     CGPoint(x: spacing, y: height - spacing),
                     CGPoint(x: width - spacing, y: height - spacing),
                     CGPoint(x: middle + topWidth, y: topHeight + spacing),
-                    CGPoint(x: middle, y: topHeight / 2 + spacing * 3)
+                    CGPoint(x: middle, y: topHeight / 2 + spacing * 3),
                 ])
             }
             .fill(Self.symbolColor)
         }
     }
 }
-
 
 #Preview {
     BadgeSymbol()

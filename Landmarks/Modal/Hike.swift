@@ -4,7 +4,6 @@
 //
 //  Created by Rebecca Stone on 6/6/25.
 //
-
 import Foundation
 
 struct Hike: Codable, Hashable, Identifiable {
@@ -14,19 +13,15 @@ struct Hike: Codable, Hashable, Identifiable {
     var difficulty: Int
     var observations: [Observation]
 
-
     static var formatter = LengthFormatter()
-
 
     var distanceText: String {
         Hike.formatter
             .string(fromValue: distance, unit: .kilometer)
     }
 
-
     struct Observation: Codable, Hashable {
         var distanceFromStart: Double
-
 
         var elevation: Range<Double>
         var pace: Range<Double>

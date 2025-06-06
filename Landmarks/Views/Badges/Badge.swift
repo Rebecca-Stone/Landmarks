@@ -4,7 +4,6 @@
 //
 //  Created by Rebecca Stone on 6/6/25.
 //
-
 import SwiftUI
 
 struct Badge: View {
@@ -16,21 +15,23 @@ struct Badge: View {
         }
         .opacity(0.5)
     }
-    
+
     var body: some View {
         ZStack {
             BadgeBackground()
-            
+
             GeometryReader { geometry in
                 badgeSymbols
                     .scaleEffect(1.0 / 4.0, anchor: .top)
-                    .position(x: geometry.size.width / 2.0, y: (3.0 / 4.0) * geometry.size.height)
+                    .position(
+                        x: geometry.size.width / 2.0,
+                        y: (3.0 / 4.0) * geometry.size.height
+                    )
             }
         }
         .scaledToFit()
     }
 }
-
 
 #Preview {
     Badge()

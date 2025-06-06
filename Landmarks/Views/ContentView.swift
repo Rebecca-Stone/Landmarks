@@ -6,16 +6,13 @@
 //
 import SwiftUI
 
-
 struct ContentView: View {
     @State private var selection: Tab = .featured
-
 
     enum Tab {
         case featured
         case list
     }
-
 
     var body: some View {
         TabView(selection: $selection) {
@@ -25,7 +22,6 @@ struct ContentView: View {
                 }
                 .tag(Tab.featured)
 
-
             LandmarkList()
                 .tabItem {
                     Label("List", systemImage: "list.bullet")
@@ -34,7 +30,6 @@ struct ContentView: View {
         }
     }
 }
-
 
 #Preview {
     ContentView()

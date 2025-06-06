@@ -4,13 +4,10 @@
 //
 //  Created by Rebecca Stone on 6/5/25.
 //
-
 import SwiftUI
-
 
 struct CircleImage: View {
     var image: Image
-
 
     var body: some View {
         image
@@ -21,7 +18,6 @@ struct CircleImage: View {
             .shadow(radius: 7)
     }
 }
-
 
 #Preview {
     CircleImage(image: Image("turtlerock"))

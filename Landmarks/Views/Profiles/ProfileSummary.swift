@@ -4,14 +4,11 @@
 //
 //  Created by Rebecca Stone on 6/6/25.
 //
-
 import SwiftUI
-
 
 struct ProfileSummary: View {
     @Environment(ModelData.self) var modelData
     var profile: Profile
-
 
     var body: some View {
         ScrollView {
@@ -20,19 +17,17 @@ struct ProfileSummary: View {
                     .bold()
                     .font(.title)
 
-
-                Text("Notifications: \(profile.prefersNotifications ? "On": "Off" )")
+                Text(
+                    "Notifications: \(profile.prefersNotifications ? "On": "Off" )"
+                )
                 Text("Seasonal Photos: \(profile.seasonalPhoto.rawValue)")
                 Text("Goal Date: ") + Text(profile.goalDate, style: .date)
 
-
                 Divider()
-
 
                 VStack(alignment: .leading) {
                     Text("Completed Badges")
                         .font(.headline)
-
 
                     ScrollView(.horizontal) {
                         HStack {
@@ -47,14 +42,11 @@ struct ProfileSummary: View {
                     }
                 }
 
-
                 Divider()
-
 
                 VStack(alignment: .leading) {
                     Text("Recent Hikes")
                         .font(.headline)
-
 
                     HikeView(hike: modelData.hikes[0])
                 }
@@ -62,7 +54,6 @@ struct ProfileSummary: View {
         }
     }
 }
-
 
 #Preview {
     ProfileSummary(profile: Profile.default)

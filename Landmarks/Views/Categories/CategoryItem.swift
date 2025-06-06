@@ -4,13 +4,10 @@
 //
 //  Created by Rebecca Stone on 6/6/25.
 //
-
 import SwiftUI
-
 
 struct CategoryItem: View {
     var landmark: Landmark
-
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -26,7 +23,6 @@ struct CategoryItem: View {
         .padding(.leading, 15)
     }
 }
-
 
 #Preview {
     CategoryItem(landmark: ModelData().landmarks[0])

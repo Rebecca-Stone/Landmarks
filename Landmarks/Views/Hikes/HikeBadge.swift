@@ -4,13 +4,10 @@
 //
 //  Created by Rebecca Stone on 6/6/25.
 //
-
 import SwiftUI
-
 
 struct HikeBadge: View {
     var name: String
-
 
     var body: some View {
         VStack(alignment: .center) {
@@ -24,7 +21,6 @@ struct HikeBadge: View {
         }
     }
 }
-
 
 #Preview {
     HikeBadge(name: "Preview Testing")
