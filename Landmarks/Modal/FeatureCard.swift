@@ -23,7 +23,7 @@ struct TextOverlay: View {
 
     var gradient: LinearGradient {
         .linearGradient(
-            Gradient(colors: [.black.opacity(0.6), .black.opacity(0)]),
+            Gradient(colors: [.black.opacity(0.7), .black.opacity(-0.5)]),
             startPoint: .bottom,
             endPoint: .center
         )
@@ -36,7 +36,7 @@ struct TextOverlay: View {
                 Text(landmark.name)
                     .font(.title)
                     .bold()
-                Text(landmark.park)
+                Text(landmark.park).italic()
             }
             .padding()
         }
